@@ -1,15 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ReporteAccidente = void 0;
-const Accidente_1 = require("./Accidente");
 class ReporteAccidente {
-    constructor(involucrados) {
-        this.reportes = [];
+    constructor(involucrados, reportes) {
         this.involucrados = involucrados;
+        this.reportes = reportes;
     }
-    agregarReporte(fecha, descripcion, severidad) {
-        const nuevoReporte = new Accidente_1.Accidente(fecha, descripcion, severidad);
-        this.reportes.push(nuevoReporte);
+    get getInvolucrados() {
+        return this.involucrados;
+    }
+    get getReportes() {
+        return this.reportes;
     }
 }
 exports.ReporteAccidente = ReporteAccidente;

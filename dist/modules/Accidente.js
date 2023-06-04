@@ -8,5 +8,17 @@ class Accidente {
         this.severidad = severidad;
         this.involucrados = [];
     }
+    get getFecha() {
+        return this.fecha;
+    }
+    get getDescripcion() {
+        return this.descripcion;
+    }
+    get getSeveridad() {
+        return this.severidad;
+    }
+    get getInvolucrados() {
+        return this.involucrados;
+    }
 }
 exports.Accidente = Accidente;

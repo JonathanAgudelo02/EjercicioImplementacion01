@@ -7,5 +7,14 @@ class LicenciaConduccion {
         this.fechaExpedicion = fechaExpedicion;
         this.vigencia = vigencia;
     }
+    get getTipo() {
+        return this.tipoLicencia;
+    }
+    get getFechaExp() {
+        return this.fechaExpedicion;
+    }
+    get getVigencia() {
+        return this.vigencia;
+    }
 }
 exports.LicenciaConduccion = LicenciaConduccion;

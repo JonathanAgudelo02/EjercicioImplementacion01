@@ -1,17 +1,21 @@
-import { Accidente } from "./Accidente";
-import { Vehiculo } from "./Vehiculo";
+import { Vehiculo } from './Vehiculo';
+import { Accidente } from './Accidente';
 
 export class ReporteAccidente {
+  private involucrados: Vehiculo[];
   private reportes: Accidente[];
-  private involucrados: Vehiculo;
 
-  constructor(involucrados: Vehiculo) {
-    this.reportes = [];
+  constructor(involucrados: Vehiculo[], reportes: Accidente[]) {
     this.involucrados = involucrados;
+    this.reportes = reportes;
   }
 
-  agregarReporte(fecha: Date, descripcion: string, severidad: number) {
-    const nuevoReporte = new Accidente(fecha, descripcion, severidad);
-    this.reportes.push(nuevoReporte);
+  get getInvolucrados(): Vehiculo[] {
+    return this.involucrados;
   }
+
+  get getReportes(): Accidente[] {
+    return this.reportes;
+  }
+  
 }

@@ -9,5 +9,20 @@ class Persona {
         this.edad = edad;
         this.vehiculos = [];
     }
+    get getNombre() {
+        return this.nombre;
+    }
+    get getCedula() {
+        return this.cedula;
+    }
+    get getTelefono() {
+        return this.telefono;
+    }
+    get getEdad() {
+        return this.edad;
+    }
+    get getVehiculos() {
+        return this.vehiculos;
+    }
 }
 exports.Persona = Persona;

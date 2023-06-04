@@ -1,20 +1,30 @@
-import { Persona } from "./Persona";
-import { Accidente } from "./Accidente";
-
+// Modulo: Vehiculo
 export class Vehiculo {
-  private marca: string;
-  private modelo: string;
-  private color: string;
-  private ruedas: number;
-  public propietario: Persona | null;
-  public reportes: Accidente[];
+    protected marca: string;
+    protected modelo: string;
+    protected color: string;
+    protected ruedas: number;
+  
+    constructor(marca: string, modelo: string, color: string, ruedas: number) {
+      this.marca = marca;
+      this.modelo = modelo;
+      this.color = color;
+      this.ruedas = ruedas;
+    }
 
-  constructor(marca: string, modelo: string, color: string, ruedas: number) {
-    this.marca = marca;
-    this.modelo = modelo;
-    this.color = color;
-    this.ruedas = ruedas;
-    this.propietario = null;
-    this.reportes = [];
+    get getMarca(): string {
+      return this.marca;
+    }
+
+    get getModelo(): string {
+      return this.modelo;
+    }
+
+    get getColor(): string {
+      return this.color;
+    }
+
+    get getRuedas(): number {
+      return this.ruedas;
+    }
   }
-}

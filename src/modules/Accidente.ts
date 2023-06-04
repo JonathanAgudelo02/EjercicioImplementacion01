@@ -12,4 +12,20 @@ export class Accidente {
     this.severidad = severidad;
     this.involucrados = [];
   }
+
+  get getFecha(): Date {
+    return this.fecha;
+  }
+
+  get getDescripcion(): string {
+    return this.descripcion;
+  }
+
+  get getSeveridad(): number {
+    return this.severidad;
+  }
+
+  get getInvolucrados(): Vehiculo[] {
+    return this.involucrados;
+  }
 }
